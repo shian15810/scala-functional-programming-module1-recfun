@@ -1,8 +1,8 @@
-val scala3Version = "3.6.2"
+course := "progfun1"
+assignment := "recfun"
 
-lazy val root = project.in(file(".")).settings(
-  name                                   := "scala3-devcontainer-template",
-  version                                := "0.1.0-SNAPSHOT",
-  scalaVersion                           := scala3Version,
-  libraryDependencies += "org.scalameta" %% "munit" % "1.0.3" % Test,
-)
+scalaVersion := "3.3.0"
+
+scalacOptions ++= Seq("-language:implicitConversions", "-deprecation")
+
+libraryDependencies += "org.scalameta" %% "munit" % "0.7.26" % Test
